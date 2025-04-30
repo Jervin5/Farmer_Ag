@@ -2307,5 +2307,30 @@ section,
   padding: 10px 20px;
   border-radius: 4px;
 }
+/* Uniform card height */
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+  height: 200px; /* or lower if needed */
+  object-fit: contain;
+  width: 100%;
+  background-color: #f8f8f8; /* optional: adds a background in case image doesn’t fill the space */
+  padding: 10px; /* optional: adds spacing around the image */
+}
+.card-img-top {
+  background-color: transparent;
+}
+
+/* Ensures card body stretches and buttons align at the bottom */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 
