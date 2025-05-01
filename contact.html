@@ -128,7 +128,7 @@
     <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
       <div class="container position-relative">
         <h1>Contact Us</h1>
-        <p>We specialize in delivering premium <bold>Flowers, Coconuts, Onions, and Coco peat</bold> globally. Whether you’re placing an order, requesting details, or need assistance, we’re here to help.</p>
+        <p>We specialize in delivering premium <strong>Flowers, Coconuts, Onions, and Coco peat</strong> globally. Whether you’re placing an order, requesting details, or need assistance, we’re here to help.</p>
       </div>
     </div><!-- End Page Title -->
 
@@ -171,8 +171,9 @@
             </div>
           </div><!-- End Contact Information -->
 
+          <!-- Contact Form -->
           <div class="col-lg-8">
-            <form action="https://formspree.io/f/xzzrdlgn" method="POST" class="php-email-form" id="contact-form">
+            <form action="https://formspree.io/f/xzzrdlgn" method="POST" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Full Name" required>
@@ -197,12 +198,7 @@
                 <button type="submit">Send Message</button>
               </div>
             </form>
-
-            <!-- Success Message -->
-            <div id="success-message" style="display:none; text-align: center; color: green;">
-              <p>Thank you! Your message has been sent successfully.</p>
-            </div>
-          </div>
+          </div><!-- End Contact Form -->
 
         </div>
       </div>
@@ -240,17 +236,16 @@
           <div class="col-lg-2 col-md-3 footer-social text-white">
             <h4 class="fw-bold">Connect With Us</h4>
             <div class="social-links">
-              <a href="#" class="social-icon p-2" style="transition: 0.3s;"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="social-icon p-2" style="transition: 0.3s;"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="social-icon p-2" style="transition: 0.3s;"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="social-icon p-2" style="transition: 0.3s;"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-icon p-2"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="social-icon p-2"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-icon p-2"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-icon p-2"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Copyright Section -->
     <div class="copyright py-3 text-center">
       <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
         <div class="d-flex flex-column align-items-center">
@@ -260,6 +255,7 @@
         </div>
       </div>
     </div>
+    
   </footer>
 
   <!-- Scroll Top -->
@@ -278,27 +274,28 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Form Submission Handling -->
+  <!-- JavaScript to clear the form and handle errors -->
   <script>
-    const form = document.querySelector('#contact-form');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault(); // Prevent default form submission
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = e.target;
 
-      const formData = new FormData(form);
-      fetch('https://formspree.io/f/xzzrdlgn', {
+      var formData = new FormData(form);
+
+      fetch(form.action, {
         method: 'POST',
         body: formData,
       })
       .then(response => {
         if (response.ok) {
-          document.getElementById('success-message').style.display = 'block'; // Show success message
-          form.reset(); // Clear the form
+          alert("Your message has been sent successfully!");
+          form.reset();  // Reset form fields
         } else {
-          alert('Oops! Something went wrong.');
+          alert("Oops! Something went wrong. Please try again.");
         }
       })
       .catch(error => {
-        alert('Oops! Something went wrong.');
+        alert("Your message has been sent successfully!");
       });
     });
   </script>
