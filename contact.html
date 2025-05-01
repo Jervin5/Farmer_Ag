@@ -105,9 +105,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo.png" alt="AgriCulture">
-        <!-- <h1 class="sitename">AgriCulture</h1>  -->
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -127,94 +125,95 @@
   <main class="main">
 
     <!-- Page Title -->
-<!-- Page Title -->
-<div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
-  <div class="container position-relative">
-    <h1>Contact Us</h1>
-    <p>we specialize in delivering premium <bold>Flowers, Coconuts, Onions, and Coco peat</bold> globally. Whether you’re placing an order, requesting details, or need assistance, we’re here to help.</p>
-    
-  </div>
-</div><!-- End Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
+      <div class="container position-relative">
+        <h1>Contact Us</h1>
+        <p>We specialize in delivering premium <bold>Flowers, Coconuts, Onions, and Coco peat</bold> globally. Whether you’re placing an order, requesting details, or need assistance, we’re here to help.</p>
+      </div>
+    </div><!-- End Page Title -->
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container" data-aos="fade">
+        <div class="row gy-5 gx-lg-5">
 
-<!-- Contact Section -->
-<section id="contact" class="contact section">
-  <div class="container" data-aos="fade">
-    <div class="row gy-5 gx-lg-5">
+          <!-- Contact Information Section -->
+          <div class="col-lg-4">
+            <div class="info">
+              <h3>Contact Information</h3>
+              <p>We value our customers and strive to provide the best service. Whether you have an inquiry, need more details, or want to place an order, feel free to reach out anytime!</p>
 
-      <!-- Contact Information Section -->
-      <div class="col-lg-4">
-        <div class="info">
-          <h3>Contact Information</h3>
-          <p>we value our customers and strive to provide the best service. Whether you have an inquiry, need more details, or want to place an order, feel free to reach out anytime!</p>
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>XYZ, Madurai</p>
+                  <p class="mt-3"><strong>Phone:</strong> <span>+91 8825861063</span></p>
+                  <p><strong>Email:</strong> <span>krexpo0212@gmail.com</span></p>
+                </div>
+              </div><!-- End Info Item -->
 
-          <div class="info-item d-flex">
-            <i class="bi bi-geo-alt flex-shrink-0"></i>
-            <div>
-              <h4>Location:</h4>
-              <p>XYZ, Madurai</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>+91 8825861063</span></p>
-              <p><strong>Email:</strong> <span>krexpo0212@gmail.com</span></p>
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>For Inquiries:</h4>
+                  <p>krexpo0212@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call Us:</h4>
+                  <p>+91 8825861063</p>
+                </div>
+              </div><!-- End Info Item -->
             </div>
-          </div><!-- End Info Item -->
+          </div><!-- End Contact Information -->
 
-          <div class="info-item d-flex">
-            <i class="bi bi-envelope flex-shrink-0"></i>
-            <div>
-              <h4>For Inquiries:</h4>
-              <p>krexpo0212@gmail.com</p>
-            </div>
-          </div><!-- End Info Item -->
+          <div class="col-lg-8">
+            <form action="https://formspree.io/f/xzzrdlgn" method="POST" class="php-email-form" id="contact-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Full Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email Address" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject of Inquiry" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" placeholder="Write Your Message Here" required></textarea>
+              </div>
 
-          <div class="info-item d-flex">
-            <i class="bi bi-phone flex-shrink-0"></i>
-            <div>
-              <h4>Call Us:</h4>
-              <p>+91 8825861063</p>
+              <!-- Optional fields sent to Formspree -->
+              <input type="hidden" name="_subject" value="New Inquiry from Website">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+
+              <div class="text-center mt-3">
+                <button type="submit">Send Message</button>
+              </div>
+            </form>
+
+            <!-- Success Message -->
+            <div id="success-message" style="display:none; text-align: center; color: green;">
+              <p>Thank you! Your message has been sent successfully.</p>
             </div>
-          </div><!-- End Info Item -->
+          </div>
 
         </div>
-      </div><!-- End Contact Information -->
-
-      <!-- Contact Form Section -->
-      <div class="col-lg-8">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-          <div class="row">
-            <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Full Name" required>
-            </div>
-            <div class="col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email Address" required>
-            </div>
-          </div>
-          <div class="form-group mt-3">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject of Inquiry" required>
-          </div>
-          <div class="form-group mt-3">
-            <textarea class="form-control" name="message" placeholder="Write Your Message Here" required></textarea>
-          </div>
-          <div class="my-3">
-            <div class="loading">Loading...</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Thank you for your message! We will get back to you soon.</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
-      </div><!-- End Contact Form -->
-
-    </div>
-  </div>
-</section><!-- /Contact Section -->
+      </div>
+    </section><!-- /Contact Section -->
 
   </main>
 
- 
   <footer id="footer" class="footer dark-background">
     <div class="footer-top py-5">
       <div class="container">
         <div class="row gy-4">
-          <!-- Footer About Section -->
           <div class="col-lg-4 col-md-6 footer-about text-white">
             <a href="index.html" class="logo d-flex align-items-center">
               <span class="sitename fs-4 fw-bold text-white">AgriCulture</span>
@@ -226,8 +225,7 @@
               <p><strong>Email:</strong> <span>krexpo0212@gmail.com</span></p>
             </div>
           </div>
-  
-          <!-- Useful Links -->
+
           <div class="col-lg-2 col-md-3 footer-links text-white">
             <h4 class="fw-bold">Quick Links</h4>
             <ul>
@@ -238,8 +236,7 @@
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
-  
-          <!-- Social Media Links -->
+
           <div class="col-lg-2 col-md-3 footer-social text-white">
             <h4 class="fw-bold">Connect With Us</h4>
             <div class="social-links">
@@ -252,7 +249,7 @@
         </div>
       </div>
     </div>
-  
+
     <!-- Copyright Section -->
     <div class="copyright py-3 text-center">
       <div class="container d-flex flex-column flex-lg-row justify-content-center align-items-center">
@@ -263,7 +260,6 @@
         </div>
       </div>
     </div>
-    
   </footer>
 
   <!-- Scroll Top -->
@@ -282,6 +278,32 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- Form Submission Handling -->
+  <script>
+    const form = document.querySelector('#contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission
+
+      const formData = new FormData(form);
+      fetch('https://formspree.io/f/xzzrdlgn', {
+        method: 'POST',
+        body: formData,
+      })
+      .then(response => {
+        if (response.ok) {
+          document.getElementById('success-message').style.display = 'block'; // Show success message
+          form.reset(); // Clear the form
+        } else {
+          alert('Oops! Something went wrong.');
+        }
+      })
+      .catch(error => {
+        alert('Oops! Something went wrong.');
+      });
+    });
+  </script>
+
 </body>
+
 
 </html>
